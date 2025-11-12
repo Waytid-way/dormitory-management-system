@@ -13,9 +13,6 @@ os.makedirs(output_dir, exist_ok=True)
 
 
 schema = """
--- Dormitory Management System (Mockup LAMP)
--- Phase 2 Unified (Awardspace Import Version)
--- Generated automatically via Python script
 
 DROP TABLE IF EXISTS payments;
 DROP TABLE IF EXISTS billings;
@@ -161,4 +158,3 @@ with open(output_file, "w", encoding="utf-8") as f:
     f.write("\n".join(payments_sql))
 
 print(f"SQL export complete: {output_file}")
-print("��� Import this file into phpMyAdmin → your database → Import tab → Go.")
