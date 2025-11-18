@@ -5,11 +5,11 @@
 .navbar a.active { background-color: #04AA6D; color: white; }
 </style>
 
-<div class="navbar">
-  <a href="/dashboard/">Dashboard</a>
-  <a href="/tenants/">ผู้เช่า</a>
-  <a href="/rooms/">ห้องพัก</a>
-  <a href="/leases/">สัญญา</a>
-  <a href="/billings/">ใบแจ้งหนี้</a>
-  <a href="/payments/">การชำระเงิน</a>
-</div>
+<nav>
+    <a href="../dashboard/">แดชบอร์ด</a> |
+    <a href="../tenants/">จัดการผู้เช่า</a> |
+    <a href="../rooms/">จัดการห้องพัก</a> |
+    <a href="../leases/">จัดการสัญญา</a> |
+    <a href="../billings/">จัดการใบแจ้งหนี้</a> |
+    <a href="../payments/">จัดการชำระเงิน</a>
+</nav>
