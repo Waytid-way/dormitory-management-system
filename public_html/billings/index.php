@@ -1,3 +1,4 @@
+<?php include('../components/navbar.php'); ?>
 <?php include('../config/db_connect.php'); ?>
 <!DOCTYPE html><html lang="th"><head><meta charset="UTF-8"><title>จัดการใบแจ้งหนี้</title></head><body>
 <h2>ข้อมูลใบแจ้งหนี้</h2>
@@ -13,16 +14,17 @@ $sql = "SELECT b.*, t.full_name, r.room_number
         ORDER BY b.billing_date DESC";
 $result = $conn->query($sql);
 while($row = $result->fetch_assoc()) {
-  echo "<tr>
-    <td>".htmlspecialchars($row['full_name'] ?? 'N/A')." / ".htmlspecialchars($row['room_number'] ?? 'N/A')."</td>
-    <td>{$row['billing_date']}</td>
-    <td>".number_format($row['total_amount'], 2)."</td>
-    <td>".htmlspecialchars($row['status'])."</td>
-    <td>
-      <a href='edit.php?id={$row['billing_id']}'>แก้ไข</a> | 
-      <a href='delete.php?id={$row['billing_id']}' onclick="return confirm('คุณแน่ใจว่าต้องการลบ?')">ลบ</a>
-    </td>
-  </tr>";
+echo "<tr>
+  <td>".htmlspecialchars($row['full_name'] ?? 'N/A')." / ".htmlspecialchars($row['room_number'] ?? 'N/A')."</td>
+  <td>{$row['billing_date']}</td>
+  <td>".number_format($row['total_amount'], 2)."</td>
+  <td>".htmlspecialchars($row['status'])."</td>
+  <td>
+    <a href='receipt.php?id={$row['billing_id']}' target='_blank' style='color:green;'>[ดูใบเสร็จ]</a> | 
+    <a href='edit.php?id={$row['billing_id']}'>แก้ไข</a> | 
+    <a href='delete.php?id={$row['billing_id']}' onclick=\"return confirm('คุณแน่ใจว่าต้องการลบ?')\">ลบ</a>
+  </td>
+</tr>";
 }
 ?>
 </table>

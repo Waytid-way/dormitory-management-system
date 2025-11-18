@@ -1,3 +1,4 @@
+<?php include('../components/navbar.php'); ?>
 <?php include('../config/db_connect.php'); ?>
 <!DOCTYPE html><html lang="th"><head><meta charset="UTF-8"><title>จัดการการชำระเงิน</title></head><body>
 <h2>ข้อมูลการชำระเงิน</h2>
