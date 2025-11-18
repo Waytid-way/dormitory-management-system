@@ -16,7 +16,7 @@ while($row = $result->fetch_assoc()) {
     <td>".htmlspecialchars($row['status'])."</td>
     <td>
       <a href='edit.php?id={$row['room_id']}'>แก้ไข</a> | 
-      <a href='delete.php?id={$row['room_id']}' onclick="return confirm('คุณแน่ใจว่าต้องการลบ?')">ลบ</a>
+      <a href='delete.php?id={$row['room_id']}' onclick=\"return confirm('คุณแน่ใจว่าต้องการลบ?')\">ลบ</a>
     </td>
   </tr>";
 }
