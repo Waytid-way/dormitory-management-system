@@ -1,5 +1,5 @@
 <?php
-$servername = "fdb1033.awardspace.net";
+$servername = "fdb1034.awardspace.net";
 $username = "4705506_dormdb";
 $password = "wutwaytargo4";
 $database = "4705506_dormdb";
